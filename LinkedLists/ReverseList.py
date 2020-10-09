@@ -8,9 +8,12 @@ class Solution:
         prev = None
         curr = head
         while curr:
+            #store backup
             temp = curr.next
+            #reverse the links
             curr.next = prev
             prev = curr
+            #move to next node
             curr = temp
         
         return prev
