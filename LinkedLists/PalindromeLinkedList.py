@@ -34,4 +34,36 @@ def isPalindrome(self, head: ListNode) -> bool:
 
 #Best soln: O(n) time & O(1) space: Finding the middle of the list (traverse entire list once) and reversing list from there. Then we compare both.
 #CODE:
-(Doing)
+class Solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+        if not head or not head.next:
+            return True
+        
+        fast = head
+        slow = head
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+         
+        if fast:
+            slow = slow.next
+        #reversing second half of the list
+        prev = None
+        cur = slow
+        while cur:
+            temp = cur.next
+            #now reverse link
+            cur.next = prev
+            prev = cur
+            
+            cur = temp
+        
+        #checking if both halves are equal
+        
+        while prev:
+            if prev.val != head.val:
+                return False
+            prev = prev.next
+            head = head.next
+        
+        return True
