@@ -15,3 +15,9 @@ class Solution:
         rightDepth = 1 + self.maxDepth(root.right)
         
         return max(leftDepth, rightDepth)
+
+    #Explanantion:
+    # maxDepth(3) = 2
+        #   -> maxDepth(9) = 1
+        #       -> maxDepth(None) = 0
+        #       -> maxDepth(None) = 0
