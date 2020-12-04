@@ -20,3 +20,16 @@ class Solution:
             org, flipped = [], []
 
         return list(map(lambda x: int(x,2), res))
+    
+ def grayCode(self, n: int) -> List[int]:
+        if n == 0:
+            return [0]
+        
+        res = ['0', '1']
+        org, flipped = [], []
+        for i in range(n - 1):
+            org = [('0' + x) for x in res]
+            flipped = [('1' + x) for x in res[::-1]]
+            res = org + flipped
+
+        return list(map(lambda x: int(x,2), res))
