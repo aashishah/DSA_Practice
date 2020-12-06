@@ -3,7 +3,7 @@ A robot is located at the top-left corner of a m x n grid (marked 'Start' in the
 The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
 How many possible unique paths are there?
 
-#CODE: TC: O(2^(m+n)) SC: O(2^(m+n))
+#CODE: TC: O(2^(m+n)) SC: O(m+n)
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         if m == 0 or n == 0:
