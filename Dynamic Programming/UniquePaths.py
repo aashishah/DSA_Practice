@@ -19,7 +19,7 @@ class Solution:
 #This is the recursive solution, which  works perfectly, but isn't optimised. Fails at a 23 x 12 matrix grid since there are too many recursive calls in the stack.
 #So we optimise the code by memoizing the solution.
 
-#MEMOIZED SOLUTION:
+#MEMOIZED SOLUTION: TC: O(mn) SC: O(m+n)
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         memo = {}
