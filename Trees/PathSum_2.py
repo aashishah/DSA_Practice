@@ -23,3 +23,23 @@ class Solution:
                     stack.append((node.left, path + [node.left.val], curr_sum - node.val))
         
         return res
+
+    #Variation: Count the no. of paths present:
+    def countPaths(root, sum_):
+        if root is None:
+            return []
+        stack = [(root, sum)]
+        count = 0
+        while stack:
+            node, curr_sum = stack.pop()
+            if node:
+                if not node.right and not node.left and node.val == curr_sum:
+                    count += 1
+                if node.right:
+                    stack.append((node.right, curr_sum - node.val))
+                if node.left:
+                    stack.append((node.left, curr_sum - node.val))
+        
+        return count
+    
+    
