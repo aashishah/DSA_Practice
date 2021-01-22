@@ -16,3 +16,20 @@ class Solution:
                     longest = s[i:j+1]
         return longest
         
+#Check:
+class Solution(object):
+    def longestPalindrome(s):
+        self.maxLen = 0
+        self.maxStr = ''
+        def expandAroundCenter(left, right):
+            l,r=left,right
+            while(l>=0 and r<len(s) and s[l]==s[r]):
+                l-=1
+                r+=1
+            if r-l-1 > self.maxLen:
+                self.maxStr = s[l+1:r]
+                self.maxLen = r-l-1
+        for i in range(0,len(s)):
+            expandAroundCenter(i,i)
+            expandAroundCenter(i,i+1)
+        return self.maxStr
