@@ -16,7 +16,7 @@ class Solution:
             if l1.val <= l2.val:
                 cur.next = l1
                 l1 = l1.next
-            elif l2.val <= l2.val:
+            elif l2.val <= l1.val:
                 cur.next = l2
                 l2 = l2.next
             cur = cur.next
