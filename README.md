@@ -1,4 +1,4 @@
-# Solutions to DSA Prep Questions from Various Sources in Python
+# Solutions to DSA Questions from Various Sources in Python
 This repository contains my solutions for DSA problems as I solve them. I try to solve atleast one problem per day depending on the month of preparation.
 All the solutions are in Python.
 
